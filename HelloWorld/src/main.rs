@@ -1,6 +1,43 @@
 fn main() {
-    println!("Hello, world!");
-    fun_array();
+    //println!("Hello, world!");
+    fun_for();
+
+}
+
+fn fun_for() {
+    let a = [10, 20, 30, 40, 50];
+    for element in a.iter() {
+        println!("element = {}", element);
+    }
+
+    let mut index = 0;
+    while index < 5 {
+        println!("element = {} ..", a[index]);
+        index += 1;
+    }
+}
+
+fn fun_loop() {
+    loop {
+        println!("looping !");
+        break;
+    }
+
+    let mut n = 5;
+    while n != 0 {
+        println!("n = {}", n);
+        n -= 1;
+    }
+}
+
+fn fun_if() {
+    let condition = true;
+    let number = if condition {
+        5
+    } else {
+        10
+    };
+    println!("number = {}", number);
 }
 
 fn fun1() {
@@ -36,3 +73,19 @@ fn fun_array() {
     println!("10th Element = {}", arr[9]);
 }
 
+fn fun_expression() {
+    let y= {
+        let x = 10;
+        x+1
+    };
+    println!("y = {}", y);
+}
+
+fn sum(x:i32, y:i32) -> i32 {
+    x+y
+}
+
+fn sum1000(x:i32, y:i32) -> i32 {
+    let x= x+y;
+    x*1000
+}
